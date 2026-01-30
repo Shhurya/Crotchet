@@ -1,14 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bloom & Knot</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <!-- Pointing back to the App.jsx file to let Vite handle the module resolution -->
-    <script type="module" src="/App.jsx"></script>
-  </body>
-</html>
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App.jsx';
+
+const rootElement = document.getElementById('root');
+if (rootElement) {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  );
+}
