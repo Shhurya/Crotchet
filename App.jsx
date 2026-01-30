@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   ShoppingBag, 
   Heart, 
-  Menu, 
   X, 
   ChevronRight, 
   Star, 
@@ -77,7 +76,7 @@ const PRODUCTS = [
   }
 ];
 
-// --- Components ---
+// --- Sub-Components ---
 
 const Navbar = ({ cartCount, onCartClick }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -308,6 +307,8 @@ const Footer = () => (
   </footer>
 );
 
+// --- Main App Component ---
+
 export default function App() {
   const [cart, setCart] = useState([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -356,7 +357,7 @@ export default function App() {
               <div className="p-3 bg-rose-50 text-rose-500 rounded-full"><Truck size={24} /></div>
               <div>
                 <h4 className="font-bold">Fast Delivery</h4>
-                <p className="text-sm text-gray-500 text-balance">Express shipping for V-Day arrivals</p>
+                <p className="text-sm text-gray-500">Express shipping for V-Day arrivals</p>
               </div>
             </div>
             <div className="flex items-center gap-4 justify-center">
@@ -379,7 +380,7 @@ export default function App() {
         {/* Shop Section */}
         <section className="py-24 max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-serif font-bold mb-4 text-balance">The Valentine's Collection</h2>
+            <h2 className="text-4xl font-serif font-bold mb-4">The Valentine's Collection</h2>
             <p className="text-gray-500 max-w-2xl mx-auto mb-10">
               Discover our handcrafted selection of eternal blooms. From romantic red roses to cheerful sunflowers, 
               find the perfect piece for your special someone.
